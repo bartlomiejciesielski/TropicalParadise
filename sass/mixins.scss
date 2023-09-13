@@ -14,5 +14,10 @@ background-image: colors.$blue-gradient, url($bgImg);
 background-size: cover;
 background-position: center;
 background-attachment: fixed; //obraz zostanie "wklejony", nie będzie się przesuwał, efekt paralaksy.
+}
 
+@mixin islandCardStyles {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
