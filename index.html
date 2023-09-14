@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tropical Paradise</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://kit.fontawesome.com/519b6f1bd8.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +78,7 @@
                 </div>
             </div>
         </section>
+
         <section class="section hero-img">
             <div class="white-block white-block-left"></div>
             <div class="white-block white-block-right"></div>
@@ -85,10 +87,11 @@
             <p class="hero-img__text">Jedyne takie miejsce na ziemi</p>
             <hr>
         </section>
+
         <section class="islands section-padding section white-section" id="islands">
             <div class="wrapper">
                 <h2 class="section-heading">Polecane Wyspy</h2>
-                <div class="islands cards">
+                <div class="islands__cards">
                     <div class="islands__card" onclick="void(0)">
                         <!--onclick="void(0)" symuluje :hover na urządzeniach mobilnych.-->
                         <div class="islands__card-img islands__card-img--first">
@@ -149,12 +152,100 @@
                 </div>
             </div>
         </section>
+
+        <section class="offers section section-padding" id="offers">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <h2 class="section-heading">Oferty</h2>
+            <div class="wrapper">
+                <div class="offers__box">
+                    <div class="offers__option">
+                        <img src="./img/bubbles.jpg" class="offers__option-img" alt="Impreza z dziećmi, bańki mydlane.">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wyjazd z dziećmi</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Odio dicta praesentium fuga in alias quisquam non eaque a perspiciatis tempora.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+                    <div class="offers__option">
+                        <img src="./img/friends.jpg" class="offers__option-img offers__option-img--right"
+                            alt="Grupa przyjaciół spacerujących plażą przy zachodzącym słóńcu.">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Wypad z przyjaciółmi</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Odio dicta praesentium fuga in alias quisquam non eaque a perspiciatis tempora.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+                    <div class="offers__option">
+                        <img src="./img/beach.jpg" class="offers__option-img" alt="Romantyczna kolacja na plaży.">
+                        <div class="offers__option-info">
+                            <h3 class="offers__option-heading">Tylko we dwoje</h3>
+                            <p class="offers__option-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Odio dicta praesentium fuga in alias quisquam non eaque a perspiciatis tempora.</p>
+                            <p class="offers__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="offers__option-btn btn-special-animation">Wybierz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews section section-padding white-section" id="reviews">
+            <h2 class="section-heading">Opinie</h2>
+            <div class="wrapper">
+                <div class="reviews__boxes">
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/person1.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ullam error quos, cumque
+                                at aut nulla molestiae expedita fugit ex?
+                            </p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/person2.jpg" alt="Mariah Wisniewsky">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ullam error quos, cumque
+                                at aut nulla molestiae expedita fugit ex?
+                            </p>
+                            <strong>Mariah Wisniewsky</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/person3.jpg" alt="Jan Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote"> <i class="fas fa-quote-right"></i></div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ullam error quos, cumque
+                                at aut nulla molestiae expedita fugit ex?
+                            </p>
+                            <strong>Jan Kowalski</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

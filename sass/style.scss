@@ -169,6 +169,7 @@ body {
 	&__img {
 		width: 100%;
 		margin-bottom: 1em;
+		border-radius: 8px;
 	}
 	&__title {
 		margin-bottom: 0.5em;
@@ -301,8 +302,110 @@ body {
 }
 
 //========================================
+//MAIN ===================================
+//offers =================================
+
+.offers {
+	position: relative;
+	@include mixins.heroImages('../img/maldives-mini.jpg');
+	overflow: hidden;
+	.section-heading {
+		color: colors.$pure-white;
+	}
+	&__option {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		background-color: colors.$pure-white;
+		overflow: hidden;
+		border-radius: 8px;
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		&-info {
+			padding: 2em;
+			background-color: colors.$pure-white;
+			z-index: 10;
+		}
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: colors.$dark;
+		}
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: colors.$pure-white;
+			background-color: colors.$main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			&:before {
+				background-color: colors.$secondary-color;
+			}
+		}
+	}
+}
+
+//========================================
+//MAIN ===================================
+//reviews ================================
+
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px #2e2e2e2e;
+		transition: transform .3s;
+		&:hover {
+			transform: scale(.95);
+		}
+	}
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+	&__box-quote {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		color: colors.$main-color;
+	}
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+		color: colors.$dark;
+	}
+}
+
+//========================================
 //MEDIA QUERIES ==========================
 //========================================
+
+@media(max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
 
 @media (min-width: 576px) {
 	.dreams {
@@ -325,6 +428,33 @@ body {
 		&__img {
 			margin-bottom: 0;
 			max-height: 300px;
+		}
+	}
+
+	.offers {
+		&__option {
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+			&-img {
+				width: 50%;
+				height: auto;
+				&--right {
+					order: 1;
+				}
+			}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+			&-btn {
+				padding: 1em;
+			}
 		}
 	}
 }
@@ -369,6 +499,18 @@ body {
 		}
 		&__text {
 			font-size: 2.2rem;
+		}
+	}
+
+	.islands {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__card {
+			margin: 1em;
+			width: 45%;
 		}
 	}
 }
@@ -423,6 +565,30 @@ body {
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+
+	.offers {
+		background-image: colors.$blue-gradient, url('../img/maldives-big.jpg');
+		&__option {
+			&-img {
+				object-fit: cover;
+				height: 300px;
+			}
+			&-text {
+				font-size: 1.5rem;
+			}
+			&-info {
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.islands {
+		&__card {
+			width: 30%;
 		}
 	}
 }
