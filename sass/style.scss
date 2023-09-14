@@ -360,7 +360,6 @@ body {
 //MAIN ===================================
 //reviews ================================
 
-
 .reviews {
 	&__box {
 		position: relative;
@@ -368,9 +367,9 @@ body {
 		padding: 2em;
 		border-radius: 8px;
 		box-shadow: 3px 3px 10px #2e2e2e2e;
-		transition: transform .3s;
+		transition: transform 0.3s;
 		&:hover {
-			transform: scale(.95);
+			transform: scale(0.95);
 		}
 	}
 	&__box-img {
@@ -398,10 +397,56 @@ body {
 }
 
 //========================================
+//MAIN ===================================
+//contact ================================
+
+.contact {
+	position: relative;
+	background-color: colors.$light-white;
+	overflow: hidden;
+	.white-block-left {
+		background-color: colors.$dark;
+	}
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	&__form-input {
+		@include mixins.contactForm;
+	}
+	&__form-textarea {
+		@include mixins.contactForm;
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: colors.$pure-white;
+		border: none;
+		border-radius: 8px;
+		background-color: colors.$main-color;
+		cursor: pointer;
+		&:before {
+			background-color: colors.$secondary-color;
+		}
+	}
+}
+
+//========================================
 //MEDIA QUERIES ==========================
 //========================================
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
 	.reviews.section-padding {
 		padding: 6em 0;
 	}
